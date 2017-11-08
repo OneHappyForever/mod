@@ -12,7 +12,7 @@
 	<main class="content">
 		<div class="content-header ui-content-header">
 			<div class="container">
-				<h1 class="content-heading">User Center</h1>
+				<h1 class="content-heading">Dashboard</h1>
 			</div>
 		</div>
 		<div class="container">
@@ -24,8 +24,8 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">latest announcement in the system</p>
-										<p>Please refer to the <a href="/user/announcement"/>announcement</a>  for other announcements.</p>
+										<p class="card-heading">Latest Announcements</p>
+										<p><a href="/user/announcement"/>Click here</a>  for other announcements.</p>
 										{if $ann != null}
 										<p>{$ann->content}</p>
 										{/if}
@@ -38,7 +38,7 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">Download and Configure Center</p>
-										<p>You can view your connection information here.<br>At the same time, here to provide you with an automated configuration file generation, including all the Shadowsocks server information, allowing you to quickly add a lot of servers, fast switching.</p>
+										<p>You can view your Shadowsocks connection details here.<br>You will also find the setup instructions for all common OS, as well as the downloadable app files.</p>
 										<nav class="tab-nav margin-top-no">
 											<ul class="nav nav-list">
 												<li {if $ssr_prefer}class="active"{/if}>
@@ -98,11 +98,11 @@
 															<dd>{$user->obfs}</dd></p>
 														</dl>
 														{else}
-															<p>Hello, your current encryption method, confusing, or protocol settings can not be connected under the ShadowsocksR client. Please use the Shadowsocks client to connect, or to the data editing page to modify and then check here.</p>
+															<p>Your current encryption type, obfuscation type, or protocol will not work with the ShadowsocksR client. Please use the Shadowsocks client to connect, or to the edit details page to change them to compatible types and come back here.</p>
 
-															<p>At the same time, ShadowsocksR single-port multi-user connection is not affected by your settings, you can use the corresponding client to connect here ~</p>
+															<p>If you are using the ShadowsocksR single-port multi-user connection type, then it will not be affected by your settings, and you can use the corresponding client to connect without problem~</p>
 
-															<p>Please note that your current SSR subscription link has expired in the current state and you can not import the node in this way.</p>
+															<p>In addition, please note that your current SSR subscription link has expired in the current state and you can not import the server details until you change the settings to a mode compatible with SSR.</p>
 														{/if}
 													</div>
 													<div class="tab-pane fade" id="all_ssr_windows">
