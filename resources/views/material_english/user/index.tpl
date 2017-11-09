@@ -118,17 +118,17 @@
 														</p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_mac">
-														<p><a href="/ssr-download/ssr-mac.dmg">Download</a>, install, and then download <a href="/user/getpcconf?is_mu=0&is_ss=0">This (ordinary port)</a> or <a  href="/user/getpcconf?is_mu=1&is_ss=0">This (single-port multi-user)</a>. Then run the program, find the small paper airplane icon on the top right of the screen, server list submenu "import server configuration file ..." import this file, and then select a suitable server, update the PAC, and then open the system agent to the Internet.</p>
+														<p><a href="/ssr-download/ssr-mac.dmg">Download</a>, install, and then download <a href="/user/getpcconf?is_mu=0&is_ss=0">This (ordinary port)</a> or <a  href="/user/getpcconf?is_mu=1&is_ss=0">This (single-port multi-user)</a>. Then run the program, find the small paper airplane icon on the top right of the screen, open the server list submenu and find the button that says "import server configuration file ...". Click on it and import this file, and then select a suitable server, update the PAC, and then use your favorite browser to surf the net.</p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_ios">
-														<p>Recommended download<a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>, Has purchased this software for the US store Apple ID:<code>shz7348@icloud.com</code> password<code>Qq654321.</code>Pay attention to special symbols and case, switch the store account to download and install, and then click in Safari<a href="{$ssr_url_all}">This (ordinary port)</a>or<a href="{$ssr_url_all_mu}">This (single-port multi-user)</a>, And then click OK, you can add nodes in bulk.</p>
+														<p>We recommend you download <a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>. It is third party and costs an additional $3 if you want to purchase it for yourself. If not, we have already purchased it on the US APP STORE with the Apple ID:<code>shz7348@icloud.com</code> and password <code>Qq654321.</code>Pay attention to special symbols and case, login to the store account to download and install, and then open in Safari <a href="{$ssr_url_all}">This (ordinary port)</a> or <a href="{$ssr_url_all_mu}">This (single-port multi-user)</a>, then click OK, and you will be able to add servers in bulk.</p>
 														<p>SSR Subscription address:<br>
-															Ordinary port address:<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code><br>
+															Normal port and address:<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code><br>
 															Single port multiuser port address:<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>
 														</p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_android">
-														<p><a href="/ssr-download/ssr-android.apk">download</a>, Install, and then click on the default browser on the<a href="{$ssr_url_all}">This link (Ordinary port)</a>or<a href="{$ssr_url_all_mu}">This link (single port multiuser)</a>, And then click OK, batch add nodes, and then select the routing around the mainland, the upper right corner can open the Internet. While providing an ACL address,<a href="/link/{$acl_token}">Long press to copy the address</a>To the client can be applied.</p>
+														<p><a href="/ssr-download/ssr-android.apk">Download</a>, install, and then open your default browser and click on <a href="{$ssr_url_all}">This link (Ordinary port)</a> or <a href="{$ssr_url_all_mu}">This link (single port multiuser)</a>. Afterward, click OK, batch add nodes, and then select the routing around the mainland, the upper right corner can open the Internet. While providing an ACL address,<a href="/link/{$acl_token}">Long press to copy the address</a>To the client can be applied.</p>
 														<p>SSR Subscription address:You can add a subscription at the node list to automatically update the node:<br>
 															Ordinary port address:<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code><br>
 															Single port multiuser port address:<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>
