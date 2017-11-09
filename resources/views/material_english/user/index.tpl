@@ -94,7 +94,7 @@
 															<p><dt>Custom protocol</dt>
 															<dd>{$user->protocol}</dd></p>
 
-															<p><dt>Custom confusion</dt>
+															<p><dt>Custom Obfuscation</dt>
 															<dd>{$user->obfs}</dd></p>
 														</dl>
 														{else}
@@ -128,14 +128,14 @@
 														</p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_android">
-														<p><a href="/ssr-download/ssr-android.apk">Download</a>, install, and then open your default browser and click on <a href="{$ssr_url_all}">This link (Ordinary port)</a> or <a href="{$ssr_url_all_mu}">This link (single port multiuser)</a>. Afterward, click OK, batch add servers, and then select the server you want, and connect by clicking the papaer airplane icon. While providing an ACL address,<a href="/link/{$acl_token}">Long press to copy the address</a>To the client can be applied.</p>
-														<p>SSR Subscription address:You can add a subscription at the node list to automatically update the node:<br>
+														<p><a href="/ssr-download/ssr-android.apk">Download</a>, install, and then open your default browser and click on <a href="{$ssr_url_all}">This link (Ordinary port)</a> or <a href="{$ssr_url_all_mu}">This link (single port multiuser)</a>. Afterward, click OK, batch add servers, and then select the server you want, and connect by clicking the paper airplane icon.</p>
+														<p>SSR Subscription address: You can add a server subscription list to automatically update the servers:<br>
 															Ordinary port address:<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code><br>
 															Single port multiuser port address:<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>
 														</p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_router">
-														<p>router is brushed<a href="http://www.right.com.cn/forum/thread-161324-1-1.html">this firmware</a>, Then SSH login router, execute the following command (import ordinary port)<br>
+														<p>Flash your router with <a href="http://www.right.com.cn/forum/thread-161324-1-1.html">this firmware</a>, Then SSH login into your router and execute the following command (import ordinary port)<br>
 														<code>wget -O- {$baseUrl}/link/{$router_token}?is_ss=0 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token}?is_ss=0 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br>
 														Or this single-port multi-user<br>
 														<code>wget -O- {$baseUrl}/link/{$router_token_without_mu}?is_ss=0 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token_without_mu}?is_ss=0 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br>
@@ -174,7 +174,7 @@
 
 														{if URL::SSCanConnect($user)}
 														<dl class="dl-horizontal">
-															<p>The address of each node, please go to the node list to see!</p>
+															<p>To get indovidual servers' addresses, please go to the server list!</p>
 
 
 															<p><dt>port</dt>
@@ -186,12 +186,12 @@
 															<p><dt>Custom encryption</dt>
 															<dd>{$user->method}</dd></p>
 
-															<p><dt>Custom confusion</dt>
+															<p><dt>Custom Obfuscation</dt>
 															<dd>{$user->obfs}</dd></p>
 														</dl>
 														{else}
-															<p>Hello, your current encryption method, confusion, or protocol settings can not be connected under the SS client. Please use the SSR client to connect, or to the data editing page to modify and then check here.</p>
-															<p>At the same time, Shadowsocks single-port multi-user connection is not affected by your settings, you can use the corresponding client to connect here ~</p>
+															<p>Your current encryption type, obfuscation type, or protocol will not work with the Shadowsocks client. Please use the ShadowsocksR client to connect, or to the edit details page to change them to compatible types before coming back here.</p>
+															<p>If you are using the Shadowsocks single-port multi-user connection type, then it will not be affected by your settings, and you can use the corresponding client to connect without problem ~</p>
 														{/if}
 													</div>
 													<div class="tab-pane fade" id="all_ss_windows">
