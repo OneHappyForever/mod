@@ -128,7 +128,7 @@
 														</p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_android">
-														<p><a href="/ssr-download/ssr-android.apk">Download</a>, install, and then open your default browser and click on <a href="{$ssr_url_all}">This link (Ordinary port)</a> or <a href="{$ssr_url_all_mu}">This link (single port multiuser)</a>. Afterward, click OK, batch add nodes, and then select the routing around the mainland, the upper right corner can open the Internet. While providing an ACL address,<a href="/link/{$acl_token}">Long press to copy the address</a>To the client can be applied.</p>
+														<p><a href="/ssr-download/ssr-android.apk">Download</a>, install, and then open your default browser and click on <a href="{$ssr_url_all}">This link (Ordinary port)</a> or <a href="{$ssr_url_all_mu}">This link (single port multiuser)</a>. Afterward, click OK, batch add servers, and then select the server you want, and connect by clicking the papaer airplane icon. While providing an ACL address,<a href="/link/{$acl_token}">Long press to copy the address</a>To the client can be applied.</p>
 														<p>SSR Subscription address:You can add a subscription at the node list to automatically update the node:<br>
 															Ordinary port address:<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code><br>
 															Single port multiuser port address:<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>
