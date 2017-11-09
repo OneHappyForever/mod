@@ -15,7 +15,7 @@
 	<main class="content">
 		<div class="content-header ui-content-header">
 			<div class="container">
-				<h1 class="content-heading">Node list</h1>
+				<h1 class="content-heading">Server List</h1>
 			</div>
 		</div>
 		<div class="container">
@@ -26,9 +26,9 @@
 							<div class="card-main">
 								<div class="card-inner">
 									<h4>Warn!</h4>
-									<p>Do not open the node address anywhere!</p>
-									<p>Flow ratio of 0.5 even with 1000MB in accordance with the 500MB traffic record records settlement.</p>
-									<a href="javascript:void(0);" onClick="urlChange('guide',0,0,0)">If you do not know how to view the details of the node and the QR Code, please click me.</a>
+									<p>Do not share the server list with publicly!</p>
+									<p></p>
+									<a href="javascript:void(0);" onClick="urlChange('guide',0,0,0)">If you do not know how to view the server details and the QR Codes, please click me.</a>
 								</div>
 							</div>
 						</div>
