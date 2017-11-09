@@ -118,7 +118,7 @@
 														</p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_mac">
-														<p><a href="/ssr-download/ssr-mac.dmg">Download</a>, Install, and then download<a href="/user/getpcconf?is_mu=0&is_ss=0">This (ordinary port)</a>or<a  href="/user/getpcconf?is_mu=1&is_ss=0">This (single-port multi-user)</a>, Run the program, the small aircraft on the right server list submenu "import server configuration file ..." import this file, and then select a suitable server, update the PAC, and then open the system agent to the Internet.</p>
+														<p><a href="/ssr-download/ssr-mac.dmg">Download</a>, install, and then download <a href="/user/getpcconf?is_mu=0&is_ss=0">This (ordinary port)</a> or <a  href="/user/getpcconf?is_mu=1&is_ss=0">This (single-port multi-user)</a>. Then run the program, find the small paper airplane icon on the top right of the screen, server list submenu "import server configuration file ..." import this file, and then select a suitable server, update the PAC, and then open the system agent to the Internet.</p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_ios">
 														<p>Recommended download<a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>, Has purchased this software for the US store Apple ID:<code>shz7348@icloud.com</code> password<code>Qq654321.</code>Pay attention to special symbols and case, switch the store account to download and install, and then click in Safari<a href="{$ssr_url_all}">This (ordinary port)</a>or<a href="{$ssr_url_all_mu}">This (single-port multi-user)</a>, And then click OK, you can add nodes in bulk.</p>
