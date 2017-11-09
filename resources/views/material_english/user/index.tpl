@@ -195,15 +195,15 @@
 														{/if}
 													</div>
 													<div class="tab-pane fade" id="all_ss_windows">
-														<p><a href="/ssr-download/ss-win.zip">download</a>, Extract, run the program, and then you have two ways to import all nodes<br>
-															(1)Download<a href="/user/getpcconf?is_mu=0&is_ss=1">This (ordinary port) </a>, placed in the directory of small aircraft, and then open the small plane.<br>
-															(2)Click<a class="copy-text" data-clipboard-text="{$ss_url_all_win}">Here (ordinary port)</a>, Then right click on the small aircraft - import the URL from the clipboard<br>
+														<p><a href="/ssr-download/ss-win.zip">Download</a>, extract, and run the program. You have two ways to import all nodes:<br>
+															(1)Downloa <a href="/user/getpcconf?is_mu=0&is_ss=1">This (ordinary port) </a>, and place it in the same directory of the app you just downloaded. Open the app.<br>
+															(2)Click<a class="copy-text" data-clipboard-text="{$ss_url_all_win}"> Here (ordinary port)</a>, then right click on the small paper airplane icon and click on "import the URL from the clipboard".<br>
 													</div>
 													<div class="tab-pane fade" id="all_ss_mac">
-														<p><a href="/ssr-download/ss-mac.zip">download</a>, Install, and then download<a href="/user/getpcconf?is_mu=0&is_ss=1">This (ordinary port)</a>or<a href="/user/getpcconf?is_mu=1&is_ss=1">This (single-port multi-user)</a>, Run the program, the small aircraft on the right server list submenu "import server configuration file ..." import this file, and then select a suitable server, update the PAC, and then open the system agent to the Internet.</p>
+														<p><a href="/ssr-download/ss-mac.zip">Download</a>, Install, and then download<a href="/user/getpcconf?is_mu=0&is_ss=1"> This (ordinary port)</a>or <a href="/user/getpcconf?is_mu=1&is_ss=1">This (single-port multi-user)</a>. Run the program, then right click on the small paper airplane icon on the right. Select from the server list submenu "import server configuration file ...". Import this file, and then select a suitable server, and update the PAC.</p>
 													</div>
 													<div class="tab-pane fade" id="all_ss_ios">
-														<p>Recommended download<a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>, Has purchased this software for the US store Apple ID:<code>shz7348@icloud.com</code> password<code>Qq654321.</code>Pay attention to special symbols and case, switch the store account to download and install, and then click in Safari<a href="{$ss_url_all}">This (ordinary port)</a>or<a href="{$ss_url_all_mu}">This (single-port multi-user)</a>, And then click OK, you can add nodes in bulk.</p>
+														<p>We recommend you download <a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>. It is a third party app that costs an additional $3. If you don't want to purchase it for yourself, we have purchased this software from the US store. You can login using this Apple ID:<code>shz7348@icloud.com</code> and password <code>Qq654321.</code> Pay attention to special symbols and case, login to download and install, and then open this page in Safari and open <a href="{$ss_url_all}">This (ordinary port)</a>or<a href="{$ss_url_all_mu}"> This (single-port multi-user)</a>, And then click OK, you can add nodes in bulk.</p>
 														<p>iOS download<a href="/link/{$ios_token}?is_ss=1">This (ordinary port）</a>or<a href="/link/{$ios_token}?is_ss=1&is_mu=1">This (single-port multi-user)</a>, Into the Surge, and then you can freely switch the server online.</p>
 													</div>
 													<div class="tab-pane fade" id="all_ss_android">
