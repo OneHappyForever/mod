@@ -204,17 +204,17 @@
 													</div>
 													<div class="tab-pane fade" id="all_ss_ios">
 														<p>We recommend you download <a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>. It is a third party app that costs an additional $3. If you don't want to purchase it for yourself, we have purchased this software from the US store. You can login using this Apple ID:<code>shz7348@icloud.com</code> and password <code>Qq654321.</code> Pay attention to special symbols and case, login to download and install, and then open this page in Safari and open <a href="{$ss_url_all}">This (ordinary port)</a>or<a href="{$ss_url_all_mu}"> This (single-port multi-user)</a>, And then click OK, you can add nodes in bulk.</p>
-														<p>iOS download<a href="/link/{$ios_token}?is_ss=1">This (ordinary port）</a>or<a href="/link/{$ios_token}?is_ss=1&is_mu=1">This (single-port multi-user)</a>, Into the Surge, and then you can freely switch the server online.</p>
+														<p>iOS download <a href="/link/{$ios_token}?is_ss=1">This (ordinary port）</a>or <a href="/link/{$ios_token}?is_ss=1&is_mu=1">This (single-port multi-user)</a>. Paste it into the app, and all the servers will be automatically added.</p>
 													</div>
 													<div class="tab-pane fade" id="all_ss_android">
-														<p><a href="/ssr-download/ss-android.apk">download</a>，and<a href="/ssr-download/ss-android-obfs.apk">download</a>, Then install, and then click on the phone<a class="copy-text" data-clipboard-text="{$ss_url_all}">This link (normal port)</a>or<a class="copy-text" data-clipboard-text="{$ss_url_all_mu}">This link (single port multi-user port)</a>Copy to the clipboard, open the Shadowsocks client, select from the clipboard import, and then select a node, set the route to bypass the mainland, click on the plane can access the Internet.</p>
+														<p>Download <a href="/ssr-download/ss-android.apk">the basic version</a> or <a href="/ssr-download/ss-android-obfs.apk">the one with obfuscation</a>. Install, and then click on <a class="copy-text" data-clipboard-text="{$ss_url_all}">this link (normal port)</a> or <a class="copy-text" data-clipboard-text="{$ss_url_all_mu}">This link (single port multi-user port)</a>Copy to the clipboard, then open the Shadowsocks client, select from "import from clipboard" from the top menu to import all the servers. Finally, select a server and click on the paper airplane icon to connect.</p>
 													</div>
 													<div class="tab-pane fade" id="all_ss_router">
-														<p>The router is brushed<a href="http://www.right.com.cn/forum/thread-161324-1-1.html">This firmware</a>, Then SSH login router, execute the following command (import ordinary port)<br>
+														<p>Flash the router with <a href="http://www.right.com.cn/forum/thread-161324-1-1.html">This firmware</a>, Then SSH login router, execute the following command (import ordinary port)<br>
 														<code>wget -O- {$baseUrl}/link/{$router_token}?is_ss=1 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token}?is_ss=1 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br>
 														Or this single-port multi-user<br>
 														<code>wget -O- {$baseUrl}/link/{$router_token_without_mu}?is_ss=1 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token_without_mu}?is_ss=1 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br>
-														After the implementation of the router can be set up the panel to choose Shadowsocks server to connect.</p>
+														After the router has been installed, you can choose a Shadowsocks server to connect.</p>
 													</div>
 												</div>
 											</div>
@@ -236,15 +236,15 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">Account usage</p>
+										<p class="card-heading">Account Details</p>
 										<dl class="dl-horizontal">
 											<p><dt>Account level</dt>
 											<dd>{$user->class}</dd></p>
 
-											<p><dt>Level expiration time</dt>
+											<p><dt>Level expiration date</dt>
 											<dd>{$user->class_expire}</dd></p>
 
-											<p><dt>Account expiration time</dt>
+											<p><dt>Account expiration date</dt>
 											<dd>{$user->expire_in}</dd>
 
 											<p><dt>Speed ​​limit</dt>
@@ -254,7 +254,7 @@
 											<dd>Not limited</dd>
 											{/if}</p>
 
-											<p><dt>Last used</dt>
+											<p><dt>Last connected</dt>
 											<dd>{$user->lastSsTime()}</dd></p>
 										</dl>
 									</div>
@@ -273,7 +273,7 @@
 											var chart = new CanvasJS.Chart("traffic_chart",
 											{
 												title:{
-													text: "Data Flow usage",
+													text: "Data Usage",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
@@ -301,7 +301,7 @@
 															y: {($user->u+$user->d-$user->last_day_t)/$user->transfer_enable*100}, legendText:"Today {number_format(($user->u+$user->d-$user->last_day_t)/$user->transfer_enable*100,2)}% {$user->TodayusedTraffic()}", indexLabel: "Today {number_format(($user->u+$user->d-$user->last_day_t)/$user->transfer_enable*100,2)}% {$user->TodayusedTraffic()}"
 														},
 														{
-															y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}, legendText:"Margin {number_format(($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100,2)}% {$user->unusedTraffic()}", indexLabel: "Margin {number_format(($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100,2)}% {$user->unusedTraffic()}"
+															y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}, legendText:"Margin {number_format(($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100,2)}% {$user->unusedTraffic()}", indexLabel: "Left {number_format(($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100,2)}% {$user->unusedTraffic()}"
 														}
 														{/if}
 													]
@@ -322,12 +322,12 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">Check to get Flow</p>
-											<p>Flow will not be reset, you can get through the check to get Flow.</p>
+										<p class="card-heading">Check in to get Additional Data</p>
+											<p>Data will not be reset, but you will get additional free data.</p>
 
-											<p>Each check can get {$config['checkinMin']}~{$config['checkinMax']}MB Data Flow。</p>
+											<p>Each time you check in, you can get {$config['checkinMin']}~{$config['checkinMax']}MB Data.</p>
 
-											<p>Check once every day. You can click the button or shake the phone to Check.</p>
+											<p>You can only check in once every day. You can click the button below or shake the phone to check in.</p>
 
 											<p>Last check-in ：<code>{$user->lastCheckInTime()}</code></p>
 
@@ -343,10 +343,10 @@
 										<div class="card-action-btn pull-left">
 											{if $user->isAbleToCheckin() }
 												<p id="checkin-btn">
-													<button id="checkin" class="btn btn-brand btn-flat waves-attach"><span class="icon">check</span>&nbsp;Check</button>
+													<button id="checkin" class="btn btn-brand btn-flat waves-attach"><span class="icon">check</span>&nbsp;Check in</button>
 												</p>
 											{else}
-												<p><a class="btn btn-brand disabled btn-flat waves-attach" href="#"><span class="icon">check</span>&nbsp;Has been checked</a></p>
+												<p><a class="btn btn-brand disabled btn-flat waves-attach" href="#"><span class="icon">check</span>&nbsp;Already checked in</a></p>
 											{/if}
 										</div>
 									</div>
