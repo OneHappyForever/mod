@@ -215,16 +215,16 @@
 										</nav>
 										<div class="tab-pane fade {if $ssr_prefer}active in{/if}" id="ssr_url">
 											{if URL::SSRCanConnect($user, $mu)}
-												<p><a href="{URL::getItemUrl($ssr_item, 0)}"/>Android phone with the default browser to open the point I can directly add (to ShadowsocksR APP)</a></p>
-												<p><a href="{URL::getItemUrl($ssr_item, 0)}"/>iOS with Safari open point I can directly add (to Shadowrocket)</a></p>
+												<p><a href="{URL::getItemUrl($ssr_item, 0)}"/>For Android: open this link in your default browser to enter your servers into the app (to ShadowsocksR APP)</a></p>
+												<p><a href="{URL::getItemUrl($ssr_item, 0)}"/>For iOS: open with Safari and open the link in (to Shadowrocket)</a></p>
 											{else}
 												<p>Your current encryption type, obfuscation type, or protocol will not work with the ShadowsocksR client. Please use the Shadowsocks client to connect, or to the edit details page to change them to compatible types before coming back here.</p>
 											{/if}
 										</div>
 										<div class="tab-pane fade {if !$ssr_prefer}active in{/if}" id="ss_url">
 											{if URL::SSCanConnect($user, $mu)}
-												<p><a href="{URL::getItemUrl($ss_item, 1)}"/>Android phone with the default browser to open the point I can directly add (to ShadowsocksR APP)</a></p>
-												<p><a href="{URL::getItemUrl($ss_item, 1)}"/>iOS with Safari open point I can directly add (to Shadowrocket)</a></p>
+												<p><a href="{URL::getItemUrl($ss_item, 1)}"/>For Android: open this link in your default browser to enter your servers into the app (to ShadowsocksR APP)</a></p>
+												<p><a href="{URL::getItemUrl($ss_item, 1)}"/>For iOS: open with Safari and open the link in (to Shadowrocket)</a></p>
 											{else}
 												<p>Your current encryption type, obfuscation type, or protocol will not work with the Shadowsocks client. Please use the ShadowsocksR client to connect, or to the edit details page to change them to compatible types before coming back here.</p>
 											{/if}
