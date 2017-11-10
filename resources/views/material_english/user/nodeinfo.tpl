@@ -12,7 +12,7 @@
 	<main class="content">
 		<div class="content-header ui-content-header">
 			<div class="container">
-				<h1 class="content-heading">Node information</h1>
+				<h1 class="content-heading">Server information</h1>
 			</div>
 		</div>
 		<div class="container">
@@ -23,8 +23,8 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">Warn!</p>
-										<p>Configuration file and QR Code do not leak！</p>
+										<p class="card-heading">Important!</p>
+										<p>Do not share/post these details and QR codes anywhere.</p>
 									</div>
 
 								</div>
@@ -36,7 +36,7 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">Configuration information</p>
+										<p class="card-heading">Server onfigurations</p>
 										<div class="tab-content">
 
 											<nav class="tab-nav margin-top-no">
@@ -58,10 +58,10 @@
 													Password：{$ssr_item['passwd']}<br>
 													Protocol：{$ssr_item['protocol']}<br>
 													Protocol parameters：{$ssr_item['protocol_param']}<br>
-													Confused：{$ssr_item['obfs']}<br>
-													Confused parameters：{$ssr_item['obfs_param']}<br></p>
+													Obfuscation：{$ssr_item['obfs']}<br>
+													Obfuscation parameters：{$ssr_item['obfs_param']}<br></p>
 												{else}
-													<p>Hello, your current encryption method, confusing, or protocol settings can not be connected under the ShadowsocksR client. Please use the Shadowsocks client to connect, or to the data editing page to modify and then check here.</p>
+													<p>Hello, your current encryption method, onfiscation, or protocol settings can not be connected under the ShadowsocksR client. Please use the Shadowsocks client to connect, or to the data editing page to modify and then check here.</p>
 													<p>At the same time, ShadowsocksR single-port multi-user connection is not affected by your settings, you can use the corresponding client to connect here ~</p>
 												{/if}
 											</div>
@@ -72,8 +72,8 @@
 													Server port：{$ss_item['port']}<br>
 													Encryption：{$ss_item['method']}<br>
 													Password：{$ss_item['passwd']}<br>
-													Confused：{$ss_item['obfs']}<br>
-													Confused parameters：{$ss_item['obfs_param']}<br></p>
+													Obfuscation：{$ss_item['obfs']}<br>
+													Obfuscation parameters：{$ss_item['obfs_param']}<br></p>
 												{else}
 													<p>Hello, your current encryption method, confusing, or protocol settings can not be connected under the Shadowsocks client. Please use the ShadowsocksR client to connect, or to the data editing page to modify and then check here.</p>
 												{/if}
@@ -90,7 +90,7 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">Client Downloads</p>
+										<p class="card-heading">App Downloads</p>
 
 
 										<nav class="tab-nav margin-top-no">
@@ -137,7 +137,7 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">Configure Json</p>
+										<p class="card-heading">Configuration Json File</p>
 
 										<nav class="tab-nav margin-top-no">
 											<ul class="nav nav-list">
