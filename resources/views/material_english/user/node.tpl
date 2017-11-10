@@ -25,10 +25,10 @@
 						<div class="card margin-bottom-no">
 							<div class="card-main">
 								<div class="card-inner">
-									<h4>Warn!</h4>
-									<p>Do not share the server list with publicly!</p>
+									<h4>Important!</h4>
+									<p>Do not share the servers publicly!</p>
 									<p></p>
-									<a href="javascript:void(0);" onClick="urlChange('guide',0,0,0)">If you do not know how to view the server details and the QR Codes, please click me.</a>
+									<a href="javascript:void(0);" onClick="urlChange('guide',0,0,0)">If you do not know how to view the server details and QR Codes, please click me.</a>
 								</div>
 							</div>
 						</div>
@@ -49,7 +49,7 @@
 														<div data-toggle="tile" data-target="#heading{$node_order->$prefix}">
 															<div class="tile-side pull-left" data-ignore="tile">
 																<div class="avatar avatar-sm">
-																	<span class="icon {if $node_heartbeat[$prefix]=='在线'}text-green{else}{if $node_heartbeat[$prefix]=='暂无数据'}text-orange{else}text-red{/if}{/if}">{if $node_heartbeat[$prefix]=="在线"}backup{else}{if $node_heartbeat[$prefix]=='暂无数据'}report{else}warning{/if}{/if}</span>
+																	<span class="icon {if $node_heartbeat[$prefix]=='Online'}text-green{else}{if $node_heartbeat[$prefix]=='No Data'}text-orange{else}text-red{/if}{/if}">{if $node_heartbeat[$prefix]=="Online"}backup{else}{if $node_heartbeat[$prefix]=='No Data'}report{else}warning{/if}{/if}</span>
 																</div>
 															</div>
 															<div class="tile-inner">
@@ -91,14 +91,14 @@
 																			{if $node->sort == 0||$node->sort==7||$node->sort==8||$node->sort==10}
 
 
-																				<p>Flow ratio：<span class="label label-red">
+																				<p>Data ratio：<span class="label label-red">
 																					{$node->traffic_rate}
 																				</span></p>
 
 
 
 																				{if ($node->sort==0||$node->sort==7||$node->sort==8||$node->sort==10)&&($node->node_speedlimit!=0||$user->node_speedlimit!=0)}
-																					<p>Node speed limit：<span class="label label-green">
+																					<p>Server speed limit：<span class="label label-green">
 																						{if $node->node_speedlimit>$user->node_speedlimit}
 																							{$node->node_speedlimit}Mbps
 																						{else}
