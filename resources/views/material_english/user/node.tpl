@@ -170,17 +170,17 @@
 																					</span></p>
 																					{/if}
 
-																					<p>Confused：<span class="label label-brand">
+																					<p>Onfuscation：<span class="label label-brand">
 																						{$single_muport['user']['obfs']}
 																					</span></p>
 
 																					{if $single_muport['user']['is_multi_user'] == 1}
-																					<p>Confuse parameters：<span class="label label-green">
+																					<p>Obfuscation parameters：<span class="label label-green">
 																						{$single_muport['user']['obfs_param']}
 																					</span></p>
 																					{/if}
 
-																					<p>Flow ratio：<span class="label label-red">
+																					<p>Data ratio：<span class="label label-red">
 																						{$node->traffic_rate}
 																					</span></p>
 
