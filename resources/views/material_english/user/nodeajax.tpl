@@ -12,7 +12,7 @@
 			chart{$id} = new CanvasJS.Chart("load{$id}_chart",
 			{
 				title:{
-					text: "Server load condition {$prefix}"
+					text: "Server load {$prefix}"
 				},
 				data: [
 				{
