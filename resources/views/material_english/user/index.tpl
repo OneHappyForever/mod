@@ -37,8 +37,8 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">Download and Configurations Center</p>
-										<p>You can view your Shadowsocks connection details here.<br>You will also find the setup instructions for all common OS, as well as the downloadable app files.</p>
+										<p class="card-heading">Shadowsocks Setup</p>
+										<p>You can view your connection details here.<br>You will also find the setup instructions for all common OS, as well as the downloadable app files.</p>
 										<nav class="tab-nav margin-top-no">
 											<ul class="nav nav-list">
 												<li {if $ssr_prefer}class="active"{/if}>
@@ -57,7 +57,7 @@
 													<nav class="tab-nav margin-top-no">
 														<ul class="nav nav-list">
 															<li class="active">
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_info"><i class="icon icon-lg">info_outline</i>&nbsp;Connection information</a>
+																<a class="waves-attach" data-toggle="tab" href="#all_ssr_info"><i class="icon icon-lg">info_outline</i>&nbsp;Connection details</a>
 															</li>
 															<li>
 																<a class="waves-attach" data-toggle="tab" href="#all_ssr_windows"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows</a>
@@ -98,18 +98,18 @@
 															<dd>{$user->obfs}</dd></p>
 														</dl>
 														{else}
-															<p>Your current encryption type, obfuscation type, or protocol will not work with the ShadowsocksR client. Please use the Shadowsocks client to connect, or to the edit details page to change them to compatible types before coming back here.</p>
+															<p>Your current encryption type, obfuscation type, or protocol will not work with the ShadowsocksR client. Please use the Shadowsocks client to connect, or go to the "edit my account" page to change them to compatible types before coming back here.</p>
 
-															<p>If you are using the ShadowsocksR single-port multi-user connection type, then it will not be affected by your settings, and you can use the corresponding client to connect without problem~</p>
+															<p>If you are using the ShadowsocksR single-port multi-user connection type, then you can skip this message.</p>
 
-															<p>In addition, please note that your current SSR subscription link has expired in the current state and you can not import the server details using the link until you change the settings to a mode compatible with SSR.</p>
+															<p>Please note that your current SSR subscription link has expired in the current state. You can not import the server details using this link until you change the settings to a mode compatible with SSR.</p>
 														{/if}
 													</div>
 													<div class="tab-pane fade" id="all_ssr_windows">
-														<p><a href="/ssr-download/ssr-win.7z">Download</a>，then unzip the file. Next, run the program. You now have three ways to import all servers.<br>
-															(1)Download <a href="/user/getpcconf?is_mu=0&is_ss=0">This (ordinary port)</a> or <a href="/user/getpcconf?is_mu=1&is_ss=0">This (single-port multi-user)</a>, then right-click on the small paper airplane icon on the bottom right corner of your screen. Select "import from configuration file" and select this file,<br>
-															(2)Click on <a class="copy-text" data-clipboard-text="{$ssr_url_all}">This (ordinary port)</a> or <a class="copy-text" data-clipboard-text="{$ssr_url_all}">This (single-port multi-user)</a>. Then right-click the paper airplane icon. Select "import from clipboard"<br>
-															(3)(Recommended) Right-click the paper airplane icon. Go to server -> SSR Server Subscription Settings. Set the subscription address to the following address, leave the other parameters blank, and then refresh the SSR server subscription.<br>
+														<p><a href="/ssr-download/ssr-win.7z">Download</a> and unzip the file. Double-click on the ShadowsocksR file to start the app. You now have three ways to import the servers:<br>
+															(1) Depending    ur setup,  /getpcconf?is_mu=0&is_ss=0">this file(ordinary port)</a> or <a href="/user/getpcconf?is_mu=1&is_ss=0">this file (single-port multi-user)</a>, then right-click on the small paper airplane icon on the bottom right corner of your screen. Select "import from configuration file" and select this file,<br>
+															(2) Click on <a class="copy-text" data-clipboard-text="{$ssr_url_all}">This (ordinary port)</a> or <a class="copy-text" data-clipboard-text="{$ssr_url_all}">This (single-port multi-user)</a>. Then right-click the paper airplane icon. Select "import from clipboard"<br>
+															(3) (Recommended) Right-click the paper airplane icon. Go to server -> SSR Server Subscription Settings. Set the subscription address to the following address, leave the other parameters blank, and then refresh the SSR server subscription.<br>
 															Once you have entered all the servers, select a suitable server, set proxy rules to "bypass LAN and mainland", and you will be connected.</p>
 
 														<p>SSR Subscription address:<br>
