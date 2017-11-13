@@ -55,7 +55,7 @@
 										
 											<p>
 												<ul>
-													<li>It is prohibitted to use this site and it's services for any illegal activity.</li>
+													<li>It is prohibitted to use this site and its services for any illegal activity.</li>
 													<li>Your usage of any server puts you under obligation to comply with the laws of the country where the server is located, as well as Chinese laws. </li>
 													<li>It is prohibited to abuse our services. This includes unreasonable use of bandwidth in a way that negatively impacts other users.</li>
 													<li>For free users, we have the right to delete accounts without notice.</li>
