@@ -12,7 +12,7 @@
 	<main class="content">
 		<div class="content-header ui-content-header">
 			<div class="container">
-				<h1 class="content-heading">编辑节点 #{$node->id}</h1>
+				<h1 class="content-heading">Edit Server Details #{$node->id}</h1>
 			</div>
 		</div>
 		<div class="container">
@@ -23,28 +23,28 @@
 							<div class="card-main">
 								<div class="card-inner">
 									<div class="form-group form-group-label">
-										<label class="floating-label" for="name">节点名称</label>
+										<label class="floating-label" for="name">Server name</label>
 										<input class="form-control" id="name" name="name" type="text" value="{$node->name}">
 									</div>
 
 
 									<div class="form-group form-group-label">
-										<label class="floating-label" for="server">节点地址</label>
+										<label class="floating-label" for="server">Server address</label>
 										<input class="form-control" id="server" name="server" type="text" value="{$node->server}">
 									</div>
 
 									<div class="form-group form-group-label">
-										<label class="floating-label" for="server">节点IP(不填则自动获取，填写请按照 <a href="https://github.com/esdeathlove/ss-panel-v3-mod/wiki/%E8%8A%82%E7%82%B9IP%E5%A1%AB%E5%86%99%E8%A7%84%E5%88%99">这里</a> 的规则进行填写)</label>
+										<label class="floating-label" for="server">Server IP(If you dont enter anything here, the system will get it automatically. Please follow <a href="https://github.com/esdeathlove/ss-panel-v3-mod/wiki/%E8%8A%82%E7%82%B9IP%E5%A1%AB%E5%86%99%E8%A7%84%E5%88%99">these guidelines</a> when entering an IP)</label>
 										<input class="form-control" id="node_ip" name="node_ip" type="text" value="{$node->node_ip}">
 									</div>
 
 									<div class="form-group form-group-label" hidden="hidden">
-										<label class="floating-label" for="method">加密方式</label>
+										<label class="floating-label" for="method">Encryption Method</label>
 										<input class="form-control" id="method" name="method" type="text" value="{$node->method}">
 									</div>
 
 									<div class="form-group form-group-label">
-										<label class="floating-label" for="rate">流量比例</label>
+										<label class="floating-label" for="rate">Data Ratio</label>
 										<input class="form-control" id="rate" name="rate" type="text" value="{$node->traffic_rate}">
 									</div>
 
@@ -52,7 +52,7 @@
 									<div class="form-group form-group-label" hidden="hidden">
 										<div class="checkbox switch">
 											<label for="custom_method">
-												<input {if $node->custom_method==1}checked{/if} class="access-hide" id="custom_method" name="custom_method" type="checkbox"><span class="switch-toggle"></span>自定义加密
+												<input {if $node->custom_method==1}checked{/if} class="access-hide" id="custom_method" name="custom_method" type="checkbox"><span class="switch-toggle"></span>Custom Encryption Method
 											</label>
 										</div>
 									</div>
@@ -60,14 +60,14 @@
 									<div class="form-group form-group-label" hidden="hidden">
 										<div class="checkbox switch">
 											<label for="custom_rss">
-												<input {if $node->custom_rss==1}checked{/if} class="access-hide" id="custom_rss" type="checkbox" name="custom_rss"><span class="switch-toggle"></span>自定义协议&混淆
+												<input {if $node->custom_rss==1}checked{/if} class="access-hide" id="custom_rss" type="checkbox" name="custom_rss"><span class="switch-toggle"></span>Custom Protocl and Obfuscation
 											</label>
 										</div>
 									</div>
 
 									<div class="form-group form-group-label">
 										<label for="mu_only">
-											<label class="floating-label" for="sort">单端口多用户启用</label>
+											<label class="floating-label" for="sort">Single port multi-user</label>
 											<select id="mu_only" class="form-control" name="is_multi_user">
 												<option value="0" {if $node->mu_only==0}selected{/if}>单端口多用户与普通端口并存</option>
 												<option value="-1" {if $node->mu_only==-1}selected{/if}>只启用普通端口</option>
