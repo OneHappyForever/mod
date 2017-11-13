@@ -47,10 +47,10 @@
 								<td>{$rule->text}</td>
 								<td>{$rule->regex}</td>
 								{if $rule->type == 1}
-									<td>By traffic</td>
+									<td>Matching by data in plain text</td>
 								{/if}		
 								{if $rule->type == 2}
-									<td>By hex</td>
+									<td>Matching by hex code</td>
 								{/if}								
 						        </tr>
 						    {/foreach}
