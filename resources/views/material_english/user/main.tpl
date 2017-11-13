@@ -294,7 +294,7 @@
 							
 							<li>
 								<a href="/user/relay">
-									<i class="icon icon-lg">compare_arrows</i>&nbsp;Data Transit Rules
+									<i class="icon icon-lg">compare_arrows</i>&nbsp;Data Redirect Rules
 								</a>
 							</li>
 							
@@ -311,10 +311,10 @@
 							</li>
 						</ul>
 
-						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">Audit</a>
+						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">Filtering</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_detect">
-							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;Audit rules</a></li>
-							<li><a href="/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;Audit record</a></li>
+							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;Filtering rules</a></li>
+							<li><a href="/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;Filtering record</a></li>
 						</ul>
 						
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_trade">Help</a>
