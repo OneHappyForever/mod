@@ -26,7 +26,7 @@
 						<div class="card-main">
 							<div class="card-inner">
 								<p>List of all items in the system. When you purchase a grade class, the period of validity is calculated from the current date.</p>
-								<p>Current balance：{$user->money} CNY</p>
+								<p>Current account balance：{$user->money} CNY</p>
 							</div>
 						</div>
 					</div>
