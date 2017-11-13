@@ -22,7 +22,7 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner">
-										<p>The page you requested doesn't exist. If you beleive this error should not have happened, <a href="https://github.com/glzjin/ss-panel-v3-mod/issues"> please got to github to submit an issue</a></p>
+										<p>The page you requested doesn't exist. If you believe this error should not have happened, <a href="https://github.com/glzjin/ss-panel-v3-mod/issues"> please go to Github to submit an issue.</a></p>
 									</div>
 									
 									<div class="card-action">
