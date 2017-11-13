@@ -39,7 +39,7 @@
 											<p>
 												<ul>
 													<li>Users need to provide an email and password. The user has to protect this information himself. The e-mail address provided upon registration is currently the only way to login and is the only proof of purchase.</li>
-													<li>E-mails and passwords are encrypted and stored securely to a reasonable extent, but that does not guarantee the absolute security of these information.</li>
+													<li>E-mails and passwords are encrypted and stored securely to a reasonable extent, and does not guarantee the absolute security of these information.</li>
 												</ul>
 											</p>
 									</div>
