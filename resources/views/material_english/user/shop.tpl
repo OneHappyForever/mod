@@ -39,8 +39,8 @@
                                 <th>ID</th>
                                 <th>Name</th>
 								<th>Price</th>
-								<th>Content</th>
-                                <th>Automatic renewal days</th>
+								<th>What you get</th>
+                                <th>Automatic renewal</th>
 								<th>Restores traffic when renewing</th>
                                 
                             </tr>
@@ -51,18 +51,18 @@
                                 </td>
                                 <td>#{$shop->id}</td>
                                 <td>{$shop->name}</td>
-								<td>{$shop->price}CNY</td>
+								<td>{$shop->price} CNY</td>
                                 <td>{$shop->content()}</td>
 								{if $shop->auto_renew==0}
-                                <td>Not auto renew</td>
+                                <td>Does not renew automatically</td>
 								{else}
-								<td>Automatically renew after {$shop->auto_renew} days</td>
+								<td>Automatically renews after {$shop->auto_renew} days</td>
 								{/if}
 								
 								{if $shop->auto_reset_bandwidth==0}
                                 <td>Not reset automatically</td>
 								{else}
-								<td>Automaticly reset</td>
+								<td>Automatically reset</td>
 								{/if}
                                 
                             </tr>
