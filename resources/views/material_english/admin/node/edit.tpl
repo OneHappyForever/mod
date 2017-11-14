@@ -60,14 +60,14 @@
 									<div class="form-group form-group-label" hidden="hidden">
 										<div class="checkbox switch">
 											<label for="custom_rss">
-												<input {if $node->custom_rss==1}checked{/if} class="access-hide" id="custom_rss" type="checkbox" name="custom_rss"><span class="switch-toggle"></span>Custom Protocl and Obfuscation
+												<input {if $node->custom_rss==1}checked{/if} class="access-hide" id="custom_rss" type="checkbox" name="custom_rss"><span class="switch-toggle"></span>Custom Protocol and Obfuscation
 											</label>
 										</div>
 									</div>
 
 									<div class="form-group form-group-label">
 										<label for="mu_only">
-											<label class="floating-label" for="sort">Single port multi-user</label>
+											<label class="floating-label" for="sort">Single-port Multi-user Options</label>
 											<select id="mu_only" class="form-control" name="is_multi_user">
 												<option value="0" {if $node->mu_only==0}selected{/if}>Single port multiuser and normal ports</option>
 												<option value="-1" {if $node->mu_only==-1}selected{/if}>Normal connections only</option>
