@@ -150,12 +150,12 @@
 						<div class="card-main">
 							<div class="card-inner">
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="invite_num">可用邀请数量</label>
+									<label class="floating-label" for="invite_num">Available Invitation Codes</label>
 									<input class="form-control" id="invite_num" type="number" value="{$edit_user->invite_num}">
 								</div>
 
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="ref_by">邀请人ID</label>
+									<label class="floating-label" for="ref_by">Invited Users IDs</label>
 									<input class="form-control" id="ref_by" type="text" value="{$edit_user->ref_by}" readonly>
 								</div>
 							</div>
@@ -167,24 +167,24 @@
 						<div class="card-main">
 							<div class="card-inner">
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="group">用户群组（用户只能访问到组别等于这个数字或0的节点）</label>
+									<label class="floating-label" for="group">User Group（This user can only access servers belonging to this group and group 0）</label>
 									<input class="form-control" id="group" type="number" value="{$edit_user->node_group}">
 								</div>
 
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="class">用户级别（用户只能访问到等级小于等于这个数字的节点）</label>
+									<label class="floating-label" for="class">User Grade（This user can only access servers with the same or lower grade number）</label>
 									<input class="form-control" id="class" type="number" value="{$edit_user->class}">
 								</div>
 
 
 
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="class_expire">用户等级过期时间(不过期就请不要动)</label>
+									<label class="floating-label" for="class_expire">User grade expiry date (If it hasn't expired, please don't change this value)</label>
 									<input class="form-control" id="class_expire" type="text" value="{$edit_user->class_expire}">
 								</div>
 
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="expire_in">用户账户过期时间(不过期就请不要动)</label>
+									<label class="floating-label" for="expire_in">User account expiry date(If it hasn't expired, please don't change this value)</label>
 									<input class="form-control" id="expire_in" type="text" value="{$edit_user->expire_in}">
 								</div>
 
@@ -197,12 +197,12 @@
 							<div class="card-inner">
 
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="node_speedlimit">用户限速，用户在每个节点所享受到的速度(0 为不限制)(Mbps)</label>
+									<label class="floating-label" for="node_speedlimit">User speed limit, the user can only get a speed up to this number on all servers (0 means unlimited)(Mbps)</label>
 									<input class="form-control" id="node_speedlimit" type="text" value="{$edit_user->node_speedlimit}">
 								</div>
 
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="node_connector">用户同时连接 IP 数(0 为不限制)</label>
+									<label class="floating-label" for="node_connector">User connection limit (by IP address) (0 means unlimited)</label>
 									<input class="form-control" id="node_connector" type="text" value="{$edit_user->node_connector}">
 								</div>
 							</div>
@@ -214,12 +214,12 @@
 							<div class="card-inner">
 
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="node_speedlimit">禁止用户访问的IP，一行一个</label>
+									<label class="floating-label" for="node_speedlimit">Blocked IPs, one per line</label>
 									<textarea class="form-control" id="forbidden_ip" rows="8">{$edit_user->get_forbidden_ip()}</textarea>
 								</div>
 
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="node_speedlimit">禁止用户访问的端口，一行一个</label>
+									<label class="floating-label" for="node_speedlimit">Blocked ports, one per line</label>
 									<textarea class="form-control" id="forbidden_port" rows="8">{$edit_user->get_forbidden_port()}</textarea>
 								</div>
 							</div>
@@ -234,7 +234,7 @@
 								<div class="form-group">
 									<div class="row">
 										<div class="col-md-10 col-md-push-1">
-											<button id="submit" type="submit" class="btn btn-block btn-brand waves-attach waves-light">修改</button>
+											<button id="submit" type="submit" class="btn btn-block btn-brand waves-attach waves-light">Submit</button>
 										</div>
 									</div>
 								</div>
@@ -330,7 +330,7 @@
                 },
                 error: function (jqXHR) {
 					$("#result").modal();
-                    $("#msg").html(data.msg+"  发生了错误。");
+                    $("#msg").html(data.msg+"  error");
                 }
             });
         }
