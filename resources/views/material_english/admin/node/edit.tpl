@@ -69,9 +69,9 @@
 										<label for="mu_only">
 											<label class="floating-label" for="sort">Single port multi-user</label>
 											<select id="mu_only" class="form-control" name="is_multi_user">
-												<option value="0" {if $node->mu_only==0}selected{/if}>单端口多用户与普通端口并存</option>
-												<option value="-1" {if $node->mu_only==-1}selected{/if}>只启用普通端口</option>
-												<option value="1" {if $node->mu_only==1}selected{/if}>只启用单端口多用户</option>
+												<option value="0" {if $node->mu_only==0}selected{/if}>Single port multiuser and normal ports</option>
+												<option value="-1" {if $node->mu_only==-1}selected{/if}>Normal connections only</option>
+												<option value="1" {if $node->mu_only==1}selected{/if}>Single port multi-user only</option>
 											</select>
 										</label>
 									</div>
@@ -87,63 +87,63 @@
 									<div class="form-group form-group-label">
 										<div class="checkbox switch">
 											<label for="type">
-												<input {if $node->type==1}checked{/if} class="access-hide" id="type" name="type" type="checkbox"><span class="switch-toggle"></span>是否显示
+												<input {if $node->type==1}checked{/if} class="access-hide" id="type" name="type" type="checkbox"><span class="switch-toggle"></span>Make this server public?
 											</label>
 										</div>
 									</div>
 
 									<div class="form-group form-group-label">
-										<label class="floating-label" for="status">节点状态</label>
+										<label class="floating-label" for="status">Server Status</label>
 										<input class="form-control" id="status" name="status" type="text" value="{$node->status}">
 									</div>
 
 									<div class="form-group form-group-label">
 										<div class="form-group form-group-label">
-												<label class="floating-label" for="sort">节点类型</label>
+												<label class="floating-label" for="sort">Server Type</label>
 												<select id="sort" class="form-control" name="sort">
 													<option value="0" {if $node->sort==0}selected{/if}>Shadowsocks</option>
-													<option value="1" {if $node->sort==1}selected{/if}>VPN/Radius基础</option>
+													<option value="1" {if $node->sort==1}selected{/if}>VPN/Radius Basic</option>
 													<option value="2" {if $node->sort==2}selected{/if}>SSH</option>
 													<option value="3" {if $node->sort==3}selected{/if}>PAC</option>
-													<option value="4" {if $node->sort==4}selected{/if}>APN文件外链</option>
+													<option value="4" {if $node->sort==4}selected{/if}>APN File Link</option>
 													<option value="5" {if $node->sort==5}selected{/if}>Anyconnect</option>
 													<option value="6" {if $node->sort==6}selected{/if}>APN</option>
-													<option value="7" {if $node->sort==7}selected{/if}>PAC PLUS(Socks 代理生成 PAC文件)</option>
-													<option value="8" {if $node->sort==8}selected{/if}>PAC PLUS PLUS(HTTPS 代理生成 PAC文件)</option>
-													<option value="9" {if $node->sort==9}selected{/if}>Shadowsocks 单端口多用户</option>
-													<option value="10" {if $node->sort==10}selected{/if}>Shadowsocks 中转</option>
+													<option value="7" {if $node->sort==7}selected{/if}>PAC PLUS(Socks Proxy Will Auto-create PAC)</option>
+													<option value="8" {if $node->sort==8}selected{/if}>PAC PLUS PLUS(HTTPS Proxy Will Auto-create PAC)</option>
+													<option value="9" {if $node->sort==9}selected{/if}>Shadowsocks Single-port Multi-user</option>
+													<option value="10" {if $node->sort==10}selected{/if}>Shadowsocks Transit Server</option>
 												</select>
 											</div>
 									</div>
 
 									<div class="form-group form-group-label">
-										<label class="floating-label" for="info">节点描述</label>
+										<label class="floating-label" for="info">Server Description</label>
 										<input class="form-control" id="info" name="info" type="text" value="{$node->info}">
 									</div>
 
 									<div class="form-group form-group-label">
-										<label class="floating-label" for="class">节点等级（不分级请填0，分级为数字）</label>
+										<label class="floating-label" for="class">Server Class/Grade（If you don't want to give a grade, type 0; otherwise, type a number）</label>
 										<input class="form-control" id="class" name="class" type="text" value="{$node->node_class}">
 									</div>
 
 									<div class="form-group form-group-label">
-										<label class="floating-label" for="group">节点群组（分组为数字，不分组请填0）</label>
+										<label class="floating-label" for="group">Server Group（Enter a number; If it doesn't belong to any group, type 0）</label>
 										<input class="form-control" id="group" name="group" type="text" value="{$node->node_group}">
 									</div>
 
 
 									<div class="form-group form-group-label">
-										<label class="floating-label" for="node_bandwidth_limit">节点流量上限（不使用的话请填0）（GB）</label>
+										<label class="floating-label" for="node_bandwidth_limit">Maximum Available Data（Type 0 to disable cap）（GB）</label>
 										<input class="form-control" id="node_bandwidth_limit" name="node_bandwidth_limit" type="text" value="{$node->node_bandwidth_limit/1024/1024/1024}">
 									</div>
 
 									<div class="form-group form-group-label">
-										<label class="floating-label" for="bandwidthlimit_resetday">节点流量上限清空日</label>
+										<label class="floating-label" for="bandwidthlimit_resetday">Server Data Cap Reset Day</label>
 										<input class="form-control" id="bandwidthlimit_resetday" name="bandwidthlimit_resetday" type="text" value="{$node->bandwidthlimit_resetday}">
 									</div>
 
 									<div class="form-group form-group-label">
-										<label class="floating-label" for="node_speedlimit">节点限速(对于每个用户端口)（Mbps）</label>
+										<label class="floating-label" for="node_speedlimit">Server Bandwidth Cap (For each user)（Mbps）</label>
 										<input class="form-control" id="node_speedlimit" name="node_speedlimit" type="text" value="{$node->node_speedlimit}">
 									</div>
 								</div>
@@ -159,7 +159,7 @@
 									<div class="form-group">
 										<div class="row">
 											<div class="col-md-10 col-md-push-1">
-												<button id="submit" type="submit" class="btn btn-block btn-brand waves-attach waves-light">修改</button>
+												<button id="submit" type="submit" class="btn btn-block btn-brand waves-attach waves-light">Submit</button>
 											</div>
 										</div>
 									</div>
@@ -278,7 +278,7 @@
                 },
                 error: function (jqXHR) {
                     $("#result").modal();
-                    $("#msg").html(data.msg+"  发生错误了。");
+                    $("#msg").html(data.msg+"  error");
                 }
             });
 		}
